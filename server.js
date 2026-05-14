@@ -21,6 +21,9 @@ const blobServiceClient =
   BlobServiceClient.fromConnectionString(
     process.env.AZURE_STORAGE_CONNECTION_STRING
   );
+  app.get("/", (req, res) => {
+  res.send("Azure backend running successfully 🚀");
+});
 
 app.post("/upload", upload.single("file"), async (req, res) => {
 
