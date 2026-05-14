@@ -15,10 +15,13 @@ async function uploadFile() {
 
   try {
 
-    const response = await fetch("http://localhost:3000/upload", {
-      method: "POST",
-      body: formData
-    });
+    const response = await fetch(
+      "https://azure-upload-backend-f0ccf6hrckdrftev.centralindia-01.azurewebsites.net/upload",
+      {
+        method: "POST",
+        body: formData
+      }
+    );
 
     const data = await response.json();
 
